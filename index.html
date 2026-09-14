@@ -1,7 +1,397 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal profile of Jingjing Wei, AI Algorithm Engineer with a background in applied mathematics, deep learning, automated theorem proving, and educational technology.">
+  <title>Jingjing Wei | AI Algorithm Engineer</title>
+  <style>
+    :root {
+      --blue:#0a4d8c;
+      --deep:#16324f;
+      --muted:#667585;
+      --line:#d9e0e7;
+      --light:#f6f8fa;
+      --accent:#8b1e2d;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Arial,Helvetica,sans-serif; color:#222; background:#fff; line-height:1.6; }
+    a { color:var(--blue); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topbar { height:8px; background:var(--deep); }
+    header { border-bottom:1px solid var(--line); background:#fff; position:sticky; top:0; z-index:10; }
+    .header-inner { max-width:1120px; margin:auto; padding:18px 28px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { font-size:20px; font-weight:700; color:var(--deep); letter-spacing:.2px; white-space:nowrap; }
+    .header-right { display:flex; align-items:center; gap:22px; flex-wrap:wrap; justify-content:flex-end; }
+    nav a { margin-left:18px; font-size:14px; color:#3c4b59; }
+    .lang-switch { display:flex; gap:8px; align-items:center; }
+    .lang-btn { border:1px solid #bcc8d3; background:#fff; color:#30465a; border-radius:4px; padding:7px 12px; font-size:13px; cursor:pointer; transition:.18s ease; }
+    .lang-btn:hover { border-color:var(--blue); color:var(--blue); }
+    .lang-btn.active { background:var(--deep); color:#fff; border-color:var(--deep); }
+
+    main { max-width:1120px; margin:0 auto; padding:40px 28px 70px; }
+    .hero { display:grid; grid-template-columns:250px 1fr; gap:42px; align-items:start; padding-bottom:34px; border-bottom:1px solid var(--line); }
+    .photo-wrap { width:240px; }
+    .photo { width:240px; height:auto; display:block; object-fit:contain; border:1px solid #cfd7df; background:#eef2f5; }
+    h1 { font-family:Georgia, 'Times New Roman', serif; font-size:38px; line-height:1.15; color:#202b38; margin:0 0 8px; font-weight:600; }
+    .subtitle { font-size:20px; color:var(--blue); font-weight:600; margin:0 0 4px; }
+    .edu-line { font-size:15px; color:var(--muted); margin-bottom:22px; }
+    .section-title-inline { font-family:Georgia, 'Times New Roman', serif; color:var(--deep); font-size:24px; margin:20px 0 10px; font-weight:600; }
+    .contact-grid { display:grid; grid-template-columns:110px 1fr; max-width:560px; font-size:15px; margin-top:18px; }
+    .contact-grid div { padding:5px 0; border-bottom:1px solid #edf0f3; }
+    .contact-grid .label { font-weight:700; color:#3c4b59; }
+
+    .content { display:grid; grid-template-columns:240px 1fr; gap:42px; padding-top:34px; }
+    .side section { margin-bottom:34px; }
+    .side h2, .main h2 { font-family:Georgia, 'Times New Roman', serif; color:var(--deep); font-size:25px; font-weight:600; margin:0 0 16px; }
+    .interests { list-style:none; padding:0; margin:0; }
+    .interests li { padding:8px 0; border-bottom:1px solid #e8edf2; color:#33475b; }
+    .main section { margin-bottom:36px; }
+    .bio { font-size:16px; color:#35424e; margin-top:0; }
+    .item { margin:0 0 28px; padding:0 0 24px; border-bottom:1px solid #e6ebf0; }
+    .item:last-child { border-bottom:0; }
+    .item-title { font-weight:700; color:#1f2d3a; font-size:17px; }
+    .item-meta { color:var(--blue); font-weight:600; margin-top:2px; }
+    .item-sub { color:var(--muted); font-size:14px; margin-top:2px; }
+    ul.detail { margin:10px 0 0 20px; padding:0; }
+    ul.detail li { margin:6px 0; }
+    .tags { display:flex; flex-wrap:wrap; gap:8px; }
+    .tag { background:#eef3f7; color:#30465a; border:1px solid #dbe3ea; border-radius:3px; padding:5px 8px; font-size:13px; }
+    .award { margin:0 0 13px; }
+    .award .year { display:inline-block; min-width:78px; color:var(--blue); font-weight:700; }
+    footer { border-top:1px solid var(--line); background:var(--light); color:#6b7785; text-align:center; font-size:13px; padding:22px; }
+
+    @media (max-width: 820px) {
+      .header-inner { align-items:flex-start; flex-direction:column; }
+      .header-right { width:100%; justify-content:space-between; }
+      nav a { margin:0 14px 0 0; }
+      .hero { grid-template-columns:1fr; }
+      .photo-wrap { width:auto; }
+      .photo { width:210px; height:auto; }
+      .content { grid-template-columns:1fr; }
+      .side { border-bottom:1px solid var(--line); padding-bottom:8px; }
+    }
+    @media print {
+      nav, .lang-switch, .topbar { display:none; }
+      header { position:static; }
+      a { color:#222; }
+      main { padding-top:20px; }
+    }
+  </style>
+  <meta name="theme-color" content="#16324f">
+</head>
 <body>
-<h1>Personal_Profile</h1>
-<p>Hello GitHub Pages</p>
+  <div class="topbar"></div>
+  <header>
+    <div class="header-inner">
+      <div class="brand">Jingjing Wei</div>
+      <div class="header-right">
+        <nav aria-label="Primary navigation">
+          <a href="#profile" data-i18n="nav_profile">Profile</a>
+          <a href="#experience" data-i18n="nav_experience">Experience</a>
+          <a href="#education" data-i18n="nav_education">Education</a>
+          <a href="#honors" data-i18n="nav_honors">Honors</a>
+        </nav>
+        <div class="lang-switch" aria-label="Language switcher">
+          <button class="lang-btn active" id="btn-en" type="button">English</button>
+          <button class="lang-btn" id="btn-zh" type="button">中文</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="profile">
+      <div class="photo-wrap">
+        <img class="photo" src="assets/profile.jpg" alt="Portrait of Jingjing Wei">
+      </div>
+      <div>
+        <h1 data-i18n="name">Jingjing Wei</h1>
+        <div class="subtitle" data-i18n="subtitle">AI Algorithm Engineer / AI Professional Designer</div>
+        <div class="edu-line" data-i18n="edu_line">M.Sc. in Applied Mathematics, Chinese Academy of Sciences</div>
+        <div class="section-title-inline" data-i18n="contact_title">Contact Information</div>
+        <div class="contact-grid">
+          <div class="label" data-i18n="label_location">Location</div><div data-i18n="value_location">Beijing, China</div>
+          <div class="label" data-i18n="label_phone">Phone</div><div><a href="tel:+8618511699662">+86 185 1169 9662</a></div>
+          <div class="label" data-i18n="label_email">Email</div><div><a href="mailto:weijingjing@bjeaedu.com">weijingjing@bjeaedu.com</a></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="content">
+      <aside class="side">
+        <section>
+          <h2 data-i18n="interests_title">Research & Technical Interests</h2>
+          <ul class="interests" data-i18n-html="interests_list">
+            <li>Deep Learning</li>
+            <li>AI Algorithm Design</li>
+            <li>Automated Theorem Proving</li>
+            <li>Data Analysis & Visualization</li>
+            <li>Educational AI Systems</li>
+            <li>Path Planning & Search Algorithms</li>
+          </ul>
+        </section>
+        <section>
+          <h2 data-i18n="skills_title">Technical Skills</h2>
+          <div class="tags" data-i18n-html="skills_tags">
+            <span class="tag">Python</span><span class="tag">C++</span><span class="tag">VBA</span>
+            <span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">R</span>
+            <span class="tag">Algorithm Design</span><span class="tag">Data Analysis</span>
+            <span class="tag">Linux</span><span class="tag">LaTeX</span><span class="tag">Wu's Method</span>
+          </div>
+        </section>
+      </aside>
+
+      <div class="main">
+        <section>
+          <h2 data-i18n="profile_title">Profile</h2>
+          <div data-i18n-html="profile_body">
+            <p class="bio">Jingjing Wei is an AI algorithm engineer with a strong mathematical background and experience spanning deep learning research, automated theorem proving, algorithm development, data systems, and educational technology. She received formal training in applied mathematics at the Chinese Academy of Sciences, where her work focused on automated geometric theorem proving using Wu's method. Her professional experience combines algorithm prototyping and model optimization with the design and delivery of practical AI-enabled systems in education.</p>
+            <p class="bio">Her work emphasizes translating mathematically complex or operationally complex problems into computable models, building reliable analytical workflows, and applying algorithms to real-world decision support and learning environments.</p>
+          </div>
+        </section>
+
+        <section id="experience">
+          <h2 data-i18n="experience_title">Professional Experience</h2>
+          <div data-i18n-html="experience_body">
+            <div class="item">
+              <div class="item-title">Deep Learning Researcher</div>
+              <div class="item-meta">Institute of Information and Systems Engineering</div>
+              <div class="item-sub">1 year · Algorithm prototyping and model optimization</div>
+              <ul class="detail">
+                <li>Participated in neural network architecture design and parameter tuning to improve convergence speed and model accuracy for task-specific applications.</li>
+                <li>Implemented core algorithm modules using mixed C++ and Python workflows and addressed large-scale data preprocessing challenges.</li>
+              </ul>
+            </div>
+            <div class="item">
+              <div class="item-title">Information Technology Project Lead / Informatics Coach / Senior Mathematics Teacher / School Research Lead</div>
+              <div class="item-meta">Beijing Yizhuang Experimental Middle School</div>
+              <div class="item-sub">5 years · AI application, educational technology, and complex system management</div>
+              <ul class="detail">
+                <li>Led a personalized homework system project and designed a capability-model-based recommendation approach for automated assignment distribution.</li>
+                <li>Developed an autonomous delivery vehicle route-planning course that introduced graph-search and shortest-path algorithms, including Dijkstra's algorithm, in an applied learning setting.</li>
+                <li>Built grade-level data dashboards and learning analytics databases with Python and Excel to support multidimensional analysis and data-driven decision-making.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="education">
+          <h2 data-i18n="education_title">Education</h2>
+          <div data-i18n-html="education_body">
+            <div class="item">
+              <div class="item-title">M.Sc. in Applied Mathematics</div>
+              <div class="item-meta">Academy of Mathematics and Systems Science, Chinese Academy of Sciences</div>
+              <div class="item-sub">Focus: Automated Theorem Proving using Wu's Method</div>
+              <p>Research focused on machine-assisted proof methods for geometric theorems, with an emphasis on formal verification, rigorous logical reasoning, and converting mathematical problems into computable representations.</p>
+              <p><strong>Selected coursework:</strong> Advanced Algebra, Real Analysis, Functional Analysis, Algorithm Design and Analysis.</p>
+            </div>
+            <div class="item">
+              <div class="item-title">B.Sc. in Mathematics and Applied Mathematics</div>
+              <div class="item-meta">Central South University</div>
+              <div class="item-sub">Focus: Fundamental Mathematics</div>
+              <p>Received systematic training in mathematics and mathematical modeling. Co-founded a mathematical modeling training studio and developed experience explaining complex mathematical ideas in an accessible way.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="honors">
+          <h2 data-i18n="honors_title">Selected Honors & Awards</h2>
+          <div data-i18n-html="honors_body">
+            <p class="award"><span class="year">Oct 2024</span> First Prize, 2024 Adolescent Development Annual Conference Paper Competition</p>
+            <p class="award"><span class="year">Sep 2024</span> First Prize, Beijing Compulsory Education Excellent Homework Case Competition</p>
+            <p class="award"><span class="year">Oct 2023</span> Beijing Outstanding Achievement in Basic Education Research</p>
+            <p class="award"><span class="year">Jul 2024</span> First Prize, 3rd Yixin Cup, Autonomous Delivery Vehicle Route Planning Design</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer data-i18n="footer">Personal profile of Jingjing Wei · Last updated September 2026</footer>
+
+  <script>
+    const translations = {
+      en: {
+        page_title: 'Jingjing Wei | AI Algorithm Engineer',
+        page_description: 'Personal profile of Jingjing Wei, AI Algorithm Engineer with a background in applied mathematics, deep learning, automated theorem proving, and educational technology.',
+        nav_profile: 'Profile',
+        nav_experience: 'Experience',
+        nav_education: 'Education',
+        nav_honors: 'Honors',
+        name: 'Jingjing Wei',
+        subtitle: 'AI Algorithm Engineer / AI Professional Designer',
+        edu_line: 'M.Sc. in Applied Mathematics, Chinese Academy of Sciences',
+        contact_title: 'Contact Information',
+        label_location: 'Location',
+        value_location: 'Beijing, China',
+        label_phone: 'Phone',
+        label_email: 'Email',
+        interests_title: 'Research & Technical Interests',
+        skills_title: 'Technical Skills',
+        profile_title: 'Profile',
+        experience_title: 'Professional Experience',
+        education_title: 'Education',
+        honors_title: 'Selected Honors & Awards',
+        footer: 'Personal profile of Jingjing Wei · Last updated September 2026',
+        interests_list: `
+          <li>Deep Learning</li>
+          <li>AI Algorithm Design</li>
+          <li>Automated Theorem Proving</li>
+          <li>Data Analysis & Visualization</li>
+          <li>Educational AI Systems</li>
+          <li>Path Planning & Search Algorithms</li>`,
+        skills_tags: `
+          <span class="tag">Python</span><span class="tag">C++</span><span class="tag">VBA</span>
+          <span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">R</span>
+          <span class="tag">Algorithm Design</span><span class="tag">Data Analysis</span>
+          <span class="tag">Linux</span><span class="tag">LaTeX</span><span class="tag">Wu's Method</span>`,
+        profile_body: `
+          <p class="bio">Jingjing Wei is an AI algorithm engineer with a strong mathematical background and experience spanning deep learning research, automated theorem proving, algorithm development, data systems, and educational technology. She received formal training in applied mathematics at the Chinese Academy of Sciences, where her work focused on automated geometric theorem proving using Wu's method. Her professional experience combines algorithm prototyping and model optimization with the design and delivery of practical AI-enabled systems in education.</p>
+          <p class="bio">Her work emphasizes translating mathematically complex or operationally complex problems into computable models, building reliable analytical workflows, and applying algorithms to real-world decision support and learning environments.</p>`,
+        experience_body: `
+          <div class="item">
+            <div class="item-title">Deep Learning Researcher</div>
+            <div class="item-meta">Institute of Information and Systems Engineering</div>
+            <div class="item-sub">1 year · Algorithm prototyping and model optimization</div>
+            <ul class="detail">
+              <li>Participated in neural network architecture design and parameter tuning to improve convergence speed and model accuracy for task-specific applications.</li>
+              <li>Implemented core algorithm modules using mixed C++ and Python workflows and addressed large-scale data preprocessing challenges.</li>
+            </ul>
+          </div>
+          <div class="item">
+            <div class="item-title">Information Technology Project Lead / Informatics Coach / Senior Mathematics Teacher / School Research Lead</div>
+            <div class="item-meta">Beijing Yizhuang Experimental Middle School</div>
+            <div class="item-sub">5 years · AI application, educational technology, and complex system management</div>
+            <ul class="detail">
+              <li>Led a personalized homework system project and designed a capability-model-based recommendation approach for automated assignment distribution.</li>
+              <li>Developed an autonomous delivery vehicle route-planning course that introduced graph-search and shortest-path algorithms, including Dijkstra's algorithm, in an applied learning setting.</li>
+              <li>Built grade-level data dashboards and learning analytics databases with Python and Excel to support multidimensional analysis and data-driven decision-making.</li>
+            </ul>
+          </div>`,
+        education_body: `
+          <div class="item">
+            <div class="item-title">M.Sc. in Applied Mathematics</div>
+            <div class="item-meta">Academy of Mathematics and Systems Science, Chinese Academy of Sciences</div>
+            <div class="item-sub">Focus: Automated Theorem Proving using Wu's Method</div>
+            <p>Research focused on machine-assisted proof methods for geometric theorems, with an emphasis on formal verification, rigorous logical reasoning, and converting mathematical problems into computable representations.</p>
+            <p><strong>Selected coursework:</strong> Advanced Algebra, Real Analysis, Functional Analysis, Algorithm Design and Analysis.</p>
+          </div>
+          <div class="item">
+            <div class="item-title">B.Sc. in Mathematics and Applied Mathematics</div>
+            <div class="item-meta">Central South University</div>
+            <div class="item-sub">Focus: Fundamental Mathematics</div>
+            <p>Received systematic training in mathematics and mathematical modeling. Co-founded a mathematical modeling training studio and developed experience explaining complex mathematical ideas in an accessible way.</p>
+          </div>`,
+        honors_body: `
+          <p class="award"><span class="year">Oct 2024</span> First Prize, 2024 Adolescent Development Annual Conference Paper Competition</p>
+          <p class="award"><span class="year">Sep 2024</span> First Prize, Beijing Compulsory Education Excellent Homework Case Competition</p>
+          <p class="award"><span class="year">Oct 2023</span> Beijing Outstanding Achievement in Basic Education Research</p>
+          <p class="award"><span class="year">Jul 2024</span> First Prize, 3rd Yixin Cup, Autonomous Delivery Vehicle Route Planning Design</p>`
+      },
+      zh: {
+        page_title: '魏婧婧 | AI算法工程师',
+        page_description: '魏婧婧个人主页，聚焦应用数学、深度学习、自动定理证明与教育技术。',
+        nav_profile: '个人简介',
+        nav_experience: '工作经历',
+        nav_education: '教育背景',
+        nav_honors: '荣誉奖项',
+        name: '魏婧婧',
+        subtitle: 'AI算法工程师 / AI专业设计师',
+        edu_line: '中国科学院 应用数学硕士',
+        contact_title: '联系方式',
+        label_location: '所在地',
+        value_location: '中国北京',
+        label_phone: '电话',
+        label_email: '邮箱',
+        interests_title: '研究与技术兴趣',
+        skills_title: '技术技能',
+        profile_title: '个人简介',
+        experience_title: '工作经历',
+        education_title: '教育背景',
+        honors_title: '代表性荣誉与奖项',
+        footer: '魏婧婧个人主页 · 最近更新于 2026 年 9 月',
+        interests_list: `
+          <li>深度学习</li>
+          <li>人工智能算法设计</li>
+          <li>自动定理证明</li>
+          <li>数据分析与可视化</li>
+          <li>教育人工智能系统</li>
+          <li>路径规划与搜索算法</li>`,
+        skills_tags: `
+          <span class="tag">Python</span><span class="tag">C++</span><span class="tag">VBA</span>
+          <span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">R</span>
+          <span class="tag">算法设计</span><span class="tag">数据分析</span>
+          <span class="tag">Linux</span><span class="tag">LaTeX</span><span class="tag">吴方法</span>`,
+        profile_body: `
+          <p class="bio">魏婧婧是一名具有扎实数学背景的 AI 算法工程师，相关经验覆盖深度学习研究、自动定理证明、算法开发、数据系统建设以及教育技术应用。她毕业于中国科学院应用数学专业，研究方向聚焦基于吴方法的几何自动定理证明。在职业实践中，她同时具备算法原型实现、模型优化，以及面向真实教育场景设计和落地 AI 系统的能力。</p>
+          <p class="bio">她的工作重点在于将复杂的数学问题或业务问题转化为可计算模型，构建可靠的分析流程，并将算法应用于真实世界的决策支持与学习场景中。</p>`,
+        experience_body: `
+          <div class="item">
+            <div class="item-title">深度学习研究员</div>
+            <div class="item-meta">信息与系统工程所</div>
+            <div class="item-sub">1年 · 算法原型实现与模型优化</div>
+            <ul class="detail">
+              <li>参与神经网络架构设计与参数调优，面向特定任务提升模型收敛速度和预测精度。</li>
+              <li>采用 C++ 与 Python 混合工作流实现核心算法模块，并解决大规模数据预处理中的关键问题。</li>
+            </ul>
+          </div>
+          <div class="item">
+            <div class="item-title">信息化项目负责人 / 信息学教练 / 数学一级教师 / 校科研负责人</div>
+            <div class="item-meta">北京亦庄实验中学</div>
+            <div class="item-sub">5年 · AI 应用、教育技术与复杂系统管理</div>
+            <ul class="detail">
+              <li>主持个性化作业系统项目，设计基于能力模型的推荐思路，实现作业的自动化分发。</li>
+              <li>开发无人配送车路径规划课程，在教学场景中引入图搜索与最短路径算法，包括 Dijkstra 算法。</li>
+              <li>基于 Python 与 Excel 搭建年级数据看板和学习分析数据库，支持多维度分析与数据驱动决策。</li>
+            </ul>
+          </div>`,
+        education_body: `
+          <div class="item">
+            <div class="item-title">应用数学硕士</div>
+            <div class="item-meta">中国科学院数学与系统科学研究院</div>
+            <div class="item-sub">研究方向：基于吴方法的自动定理证明</div>
+            <p>研究聚焦几何定理的机器辅助证明方法，强调形式化验证、严格逻辑推理以及将数学问题转化为可计算表示。</p>
+            <p><strong>主要课程：</strong>高等代数、实变函数、泛函分析、算法设计与分析。</p>
+          </div>
+          <div class="item">
+            <div class="item-title">数学与应用数学学士</div>
+            <div class="item-meta">中南大学</div>
+            <div class="item-sub">方向：基础数学</div>
+            <p>接受了系统的数学与数学建模训练。曾共同创办数学建模培训工作室，并积累了将复杂数学思想清晰讲解给学习者的经验。</p>
+          </div>`,
+        honors_body: `
+          <p class="award"><span class="year">2024年10月</span> 2024 青少年发展年会论文评比一等奖</p>
+          <p class="award"><span class="year">2024年9月</span> 北京市义务教育优秀作业案例评选一等奖</p>
+          <p class="award"><span class="year">2023年10月</span> 北京市基础教育科研优秀成果奖</p>
+          <p class="award"><span class="year">2024年7月</span> 第三届益新杯无人配送车路线规划设计一等奖</p>`
+      }
+    };
+
+    function setLanguage(lang) {
+      const dict = translations[lang] || translations.en;
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+      document.title = dict.page_title;
+      const meta = document.querySelector('meta[name="description"]');
+      if (meta) meta.setAttribute('content', dict.page_description);
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key] !== undefined) el.textContent = dict[key];
+      });
+      document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        if (dict[key] !== undefined) el.innerHTML = dict[key];
+      });
+
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+    }
+
+    document.getElementById('btn-en').addEventListener('click', () => setLanguage('en'));
+    document.getElementById('btn-zh').addEventListener('click', () => setLanguage('zh'));
+    setLanguage('en');
+  </script>
 </body>
 </html>
